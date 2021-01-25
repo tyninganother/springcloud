@@ -13,6 +13,7 @@
         <module>order-server1</module >
         <module>eureka-server</module>
         <module>eureka-server1</module>
+        <module>base-util</module>
     </modules>
     <name>springcloud</name>
     <description>spring cloud</description>
