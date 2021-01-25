@@ -8,8 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <!--    为了模拟集群并且使用idea启动可以使用artifactiId来做区分 -->
     <artifactId>eureka-server1</artifactId>
+    <name>eureka-server1</name>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

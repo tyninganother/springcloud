@@ -1,0 +1,43 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: order-server
+  datasource:
+    # 使用druid数据源
+    druid:
+      #JDBC配置
+      url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: root
+      password:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      max-wait: 60000
+      pool-prepared-statements: true
+      #      max-pool-prepared-statement-per-connection-siz:
+      max-open-prepared-statements: 20
+      validation-query: select 'x'
+      #      validation-query-timeout:
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      #      time-between-eviction-runs-millis:
+      #      min-evictable-idle-time-millis:
+      #      max-evictable-idle-time-millis:
+      filters: stat
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.tyning.**.**.entities
+
+eureka:
+  client:
+    # 这个标记就是为了告诉eureka-server这个client要入住的
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka.server.1.com:7001/eureka/,http://eureka.server.2.com:7002/eureka/

@@ -8,7 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>provider-payment</module>
+        <module>provider-payment1</module>
         <module>order-server</module>
+        <module>order-server1</module >
         <module>eureka-server</module>
         <module>eureka-server1</module>
     </modules>
