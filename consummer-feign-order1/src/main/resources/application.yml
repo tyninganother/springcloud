@@ -15,3 +15,8 @@ eureka:
 ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 5000
+
+# 打开openFeign的请求http链接
+logging:
+  level:
+    com.tyning.springcloud.orderserver.OpenFeignService: debug
