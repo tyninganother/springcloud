@@ -1,0 +1,16 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: payment-hystrix-server2
+
+eureka:
+  client:
+    # 这个标记就是为了告诉eureka-server这个client要入住的
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka.server.1.com:7001/eureka/,http://eureka.server.2.com:7002/eureka/
+  instance:
+    instance-id: payment-hystrix-server2
+    prefer-ip-address: true

@@ -7,15 +7,21 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>provider-payment</module>
-        <module>provider-payment1</module>
-        <module>order-server</module>
-        <module>order-server1</module >
-        <module>eureka-server</module>
-        <module>eureka-server1</module>
         <module>base-util</module>
-        <module>consummer-feign-order1</module>
-        <module>consummer-feign-order2</module>
+        <module>eureka-server7001</module>
+        <module>eureka-server7002</module>
+        <module>openfeign-order-server1001</module>
+        <module>openfeign-order-server1002</module>
+        <module>pay-server8001</module>
+        <module>pay-server8002</module>
+        <module>zk-pay-server8004</module>
+        <module>hystrix-pay-server8001</module>
+        <module>hystrix-pay-server8002</module>
+        <module>order-server9001</module>
+        <module>order-server9002</module>
+        <module>hystrix-order-server9001</module>
+        <module>hystrix-order-server9002</module>
+        <module>gateway9501</module>
     </modules>
     <name>springcloud</name>
     <description>spring cloud</description>
@@ -31,6 +37,8 @@
         <druid.spring.boot.starter.version>1.1.18</druid.spring.boot.starter.version>
         <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
         <spring.boot.maven.plugin.version>2.4.1</spring.boot.maven.plugin.version>
+        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+        <springcloud.version>Hoxton.SR1</springcloud.version>
         <java.version>1.8</java.version>
     </properties>
 
@@ -40,14 +48,14 @@
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.2.RELEASE</version>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR1</version>
+                <version>${springcloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

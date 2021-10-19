@@ -1,0 +1,22 @@
+server:
+  port: 1002
+
+eureka:
+  client:
+    # 这个标记就是为了告诉eureka-server这个client要入住的
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka.server.1.com:7001/eureka/,http://eureka.server.2.com:7002/eureka/
+  instance:
+    instance-id: openfeign-order-server-9002
+    prefer-ip-address: true
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+# 打开openFeign的请求http链接
+logging:
+  level:
+    com.tyning.springcloud.orderserver.OpenFeignService: debug

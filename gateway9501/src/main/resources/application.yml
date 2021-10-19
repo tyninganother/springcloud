@@ -1,0 +1,21 @@
+server:
+  port: 9501
+spring:
+  application:
+    name: cloud-gateWay
+  cloud:
+    gateway:
+      routes:
+        - id: payment_routh
+          uri: http://localhost:8001
+          predicates:
+            - Path=/pay/get
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  clinet:
+  service-url:
+    register-with-eureka: true
+    fetch-registry: true
+    defultZone: http://eureka.server.1.com:7001/eureka/,http://eureka.server.2.com:7002/eureka/
